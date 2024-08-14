@@ -36,6 +36,8 @@ app.use("/api/users", authMiddleware, userRouter);
 app.use("/api/articles", authMiddleware, articleRouter);
 
 //Public routes
+
+//app.use("/registerTest", usersController.create);
 app.post("/login", usersController.login);
 app.get("/:userId/articles", usersController.getUserArticles);
 
